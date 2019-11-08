@@ -3,6 +3,12 @@ import React from 'react'
 class PlayerTwo extends React.Component
 {    
 
+    constructor(props)
+{
+super(props);
+
+}
+
 render()
 {
     return(
@@ -14,7 +20,7 @@ render()
         <br/>
         <label>Played number of times: </label>
         <label>1</label>
-        <button>The user is playing now</button>
+        <button disabled={this.props.player} onClick={this.props.buttonsHandler2}>{this.props.player?"The user is playing now":"Play"}</button>
     </div>)
 
 }

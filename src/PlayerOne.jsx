@@ -2,7 +2,15 @@ import React from 'react'
 
 class PlayerOne extends React.Component
 {    
-//pass states using handler and props
+
+constructor(props)
+{
+super(props);
+
+}
+
+
+
 render()
 {
    return(
@@ -14,7 +22,7 @@ render()
         <br/>
         <label>Played number of times: </label>
         <label>0</label>
-        <button>Play</button>
+        <button disabled={this.props.player} onClick={this.props.buttonsHandler}>{this.props.player?"The user is playing now":"Play"}</button>
     </div>)
 
 }
